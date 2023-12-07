@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Principal extends AppCompatActivity {
 
     @Override
@@ -34,5 +36,17 @@ public class Principal extends AppCompatActivity {
 
             }
         });
+        findViewById(R.id.btnCerrarSesion).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cerrarSesion();
+            }
+        });
+    }
+    private void cerrarSesion() {
+        FirebaseAuth.getInstance().signOut();
+        Intent intent = new Intent(Principal.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

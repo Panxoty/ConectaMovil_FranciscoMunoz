@@ -40,6 +40,7 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore:23.0.0")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    //Firebase
     implementation("com.google.firebase:firebase-analytics:21.5.0")
     implementation("com.google.firebase:firebase-auth:22.3.0")
     implementation("com.google.firebase:firebase-storage:20.3.0")
@@ -48,7 +49,7 @@ dependencies {
 
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation ("androidx.legacy:legacy-support-v4:1.0.0")
-
+    //MQTT
     implementation ("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
     implementation ("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1")
 

@@ -1,10 +1,12 @@
 <!-- activity_mostrar_datos.xml -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_app"
-    tools:context=".MostrarDatosActivity">
+    tools:context=".MostrarDatosActivity"
+    android:gravity="center">
 
     <ImageView
         android:id="@+id/imageViewFotoPerfil"
@@ -19,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/grey"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_below="@id/imageViewFotoPerfil"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
@@ -32,7 +34,7 @@
         android:textColor="@color/grey"
         android:layout_below="@id/textViewNombre"
         android:layout_marginTop="8dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_centerHorizontal="true"
         android:text="Apellido: " />
 
@@ -41,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/grey"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_below="@id/textViewApellido"
         android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
@@ -51,35 +53,39 @@
         android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="@color/grey"
         android:layout_below="@id/textViewUsuario"
         android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
-        android:text="Email: " />
+        android:text="Email: "/>
 
-    <Button
-        android:id="@+id/btnIrAPerfil"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewEmail"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="162dp"
-        android:layout_marginEnd="154dp"
-        android:text="Ir a Perfil" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="470dp">
+        <!-- Btn editar datos -->
+        <Button
+            android:id="@+id/btnIrAPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewEmail"
+            android:text="Editar Datos"
+            android:backgroundTint="@color/grey"
+            android:textColor="@color/white"
+            />
+        <!-- btn cerrar sesion -->
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_below="@+id/btnIrAPerfil"
+            android:text="Cerrar Sesión"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"/>
 
-    <Button
-        android:id="@+id/btnCerrarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnIrAPerfil"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="140dp"
-        android:text="Cerrar Sesión" />
-
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </RelativeLayout>

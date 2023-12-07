@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,24 +14,26 @@
 
     <Button
         android:id="@+id/btnGoToListarContactos"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver Contactos"
-        android:layout_marginBottom="16dp"
         android:layout_centerInParent="true"
-        style="@style/Widget.Material3.Button.IconButton.Filled"
-        android:backgroundTint="@color/uno"/>
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/uno"
+        android:text="Ver Contactos"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnGoToMostrarDatos"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ver tus datos"
         android:layout_below="@id/btnGoToListarContactos"
-        android:layout_marginTop="16dp"
         android:layout_centerInParent="true"
-        style="@style/Widget.Material3.Button.IconButton.Filled"
-        android:backgroundTint="@color/lavender"/>
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/uno"
+        android:text="Ver tus datos"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnchat"
@@ -41,7 +44,17 @@
         android:layout_marginTop="90dp"
         android:text="Ir a mensajes"
         style="@style/Widget.Material3.Button.IconButton.Filled"
-        android:backgroundTint="@color/uno"/>
+        android:backgroundTint="@color/uno"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="570dp"
+        android:backgroundTint="@color/grey"
+        android:text="Cerrar Sesion"
+        android:textColor="@color/white"/>
 
     <ImageView
         android:id="@+id/imageView"
